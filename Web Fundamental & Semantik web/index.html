@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <title>Sesi Latihan - Web Fundamentals</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">DevLog<span>.</span></div>
+        <nav>
+            <a href="#">Beranda</a>
+            <a href="#">Modul</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="card">
+            <h2>Form Uji Kompetensi</h2>
+            <p class="subtitle">Silakan isi data di bawah untuk validasi latihan minggu 1.</p>
+
+            <form action="#" class="form-group">
+                <div class="input-box">
+                    <label for="nama">Nama Lengkap</label>
+                    <input type="text" id="nama" placeholder="Masukkan nama kamu..." required>
+                </div>
+
+                <div class="input-box">
+                    <label for="topik">Topik Pembelajaran</label>
+                    <select id="topik">
+                        <option value="html">Semantic HTML5</option>
+                        <option value="css">CSS Basics</option>
+                        <option value="js">JavaScript Intro</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn-primary">Kirim Log</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Developer Devlog &bull; Minggu 1</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
