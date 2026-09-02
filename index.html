@@ -1,47 +1,55 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <title>Sesi Latihan - Web Fundamentals</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Tracker - Pemweb</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header class="navbar">
-        <div class="logo">DevLog<span>.</span></div>
+        <div class="logo">Learning<span>Tracker</span></div>
         <nav>
-            <a href="#">Beranda</a>
-            <a href="#">Modul</a>
+            <span class="badge">Web Programming</span>
         </nav>
     </header>
 
     <main class="container">
         <section class="card">
-            <h2>Form Uji Kompetensi</h2>
-            <p class="subtitle">Silakan isi data di bawah untuk validasi latihan minggu 1.</p>
+            <h2>Log Sesi Belajar</h2>
+            <p class="subtitle">Catat progress dan topik yang kamu pelajari hari ini.</p>
 
-            <form action="#" class="form-group">
-                <div class="input-box">
-                    <label for="nama">Nama Lengkap</label>
-                    <input type="text" id="nama" placeholder="Masukkan nama kamu..." required>
+            <form id="logForm">
+                <div class="grid-inputs">
+                    <div class="input-box">
+                        <label for="nama">Nama Mahasiswa</label>
+                        <input type="text" id="nama" placeholder="Masukkan nama..." required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="topik">Topik Silabus</label>
+                        <select id="topik" required>
+                            <option value="">-- Pilih Topik --</option>
+                            <option value="HTML Basics">HTML5 Semantik</option>
+                            <option value="CSS Styling">CSS Selectors & Box Model</option>
+                            <option value="CSS Layout">CSS Layout (Flexbox & Grid)</option>
+                            <option value="Responsive Web">Responsive Design & Media Queries</option>
+                        </select>
+                    </div>
                 </div>
 
                 <div class="input-box">
-                    <label for="topik">Topik Pembelajaran</label>
-                    <select id="topik">
-                        <option value="html">Semantic HTML5</option>
-                        <option value="css">CSS Basics</option>
-                        <option value="js">JavaScript Intro</option>
-                    </select>
+                    <label for="refleksi">Catatan Refleksi</label>
+                    <textarea id="refleksi" rows="3" placeholder="Apa insight baru yang kamu dapatkan?" required></textarea>
                 </div>
 
-                <button type="submit" class="btn-primary">Kirim Log</button>
+                <button type="submit" class="btn-primary">Kirim Log Belajar</button>
             </form>
+
+            <div id="notif" class="notif-box hidden"></div>
         </section>
     </main>
-
-    <footer>
-        <p>&copy; 2026 Developer Devlog &bull; Minggu 1</p>
-    </footer>
 
     <script src="script.js"></script>
 </body>
