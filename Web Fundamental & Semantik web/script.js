@@ -1,9 +1,21 @@
-const formLatihan = document.querySelector('.form-group');
+document.addEventListener('DOMContentLoaded', () => {
+    const logForm = document.getElementById('logForm');
+    const notif = document.getElementById('notif');
 
-formLatihan.addEventListener('submit', function(event) {
-    // Mencegah halaman reload otomatis pas tombol diklik
-    event.preventDefault();
+    logForm.addEventListener('submit', (e) => {
+        e.preventDefault();
 
-    const namaInput = document.getElementById('nama').value;
-    alert('Halo ' + namaInput + ', data log kamu berhasil dikirim!');
+        const nama = document.getElementById('nama').value;
+        const topik = document.getElementById('topik').value;
+
+        notif.textContent = `Sip, log untuk topik "${topik}" berhasil disimpan oleh ${nama}!`;
+        notif.className = 'notif-box success';
+
+        logForm.reset();
+
+    
+        setTimeout(() => {
+            notif.className = 'notif-box hidden';
+        }, 4000);
+    });
 });

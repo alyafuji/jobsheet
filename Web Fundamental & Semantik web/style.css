@@ -12,14 +12,13 @@ body {
     flex-direction: column;
     min-height: 100vh;
 }
-
 .navbar {
     background-color: #ffffff;
     padding: 1rem 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .logo {
@@ -28,96 +27,126 @@ body {
     color: #1e293b;
 }
 
-.logo span { color: #2563eb; }
-
-.navbar nav a {
-    margin-left: 1.5rem;
-    text-decoration: none;
-    color: #64748b;
-    font-size: 0.9rem;
+.logo span {
+    color: #2563eb;
 }
 
-/* Main Container & Card */
+.badge {
+    background-color: #eff6ff;
+    color: #2563eb;
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
 .container {
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 2rem;
+    padding: 2rem 1rem;
 }
 
 .card {
     background: #ffffff;
-    padding: 2rem;
+    padding: 2.5rem;
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
     width: 100%;
-    max-width: 420px;
+    max-width: 520px;
 }
 
 .card h2 {
-    font-size: 1.4rem;
     color: #0f172a;
     margin-bottom: 0.3rem;
 }
 
 .subtitle {
-    font-size: 0.85rem;
     color: #64748b;
+    font-size: 0.9rem;
     margin-bottom: 1.5rem;
 }
 
-/* Form Styling */
-.form-group {
-    display: flex;
-    flex-direction: column;
-    gap: 1.2rem;
+.grid-inputs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
 }
 
 .input-box {
     display: flex;
     flex-direction: column;
-    gap: 0.4rem;
+    margin-bottom: 1rem;
 }
 
 .input-box label {
     font-size: 0.85rem;
     font-weight: 600;
-    color: #334155;
+    color: #475569;
+    margin-bottom: 0.4rem;
 }
 
-.input-box input, 
-.input-box select {
-    padding: 0.6rem 0.8rem;
+.input-box input,
+.input-box select,
+.input-box textarea {
+    padding: 0.65rem 0.8rem;
     border: 1px solid #cbd5e1;
     border-radius: 6px;
     font-size: 0.9rem;
     outline: none;
+    transition: border-color 0.2s;
 }
 
-.input-box input:focus, 
-.input-box select:focus {
+.input-box input:focus,
+.input-box select:focus,
+.input-box textarea:focus {
     border-color: #2563eb;
 }
 
 .btn-primary {
+    width: 100%;
     background-color: #2563eb;
     color: white;
     border: none;
-    padding: 0.7rem;
+    padding: 0.8rem;
     border-radius: 6px;
     font-weight: 600;
     cursor: pointer;
-    margin-top: 0.5rem;
+    transition: background-color 0.2s;
 }
 
 .btn-primary:hover {
     background-color: #1d4ed8;
 }
 
-footer {
+.notif-box {
+    margin-top: 1rem;
+    padding: 0.8rem;
+    border-radius: 6px;
+    font-size: 0.85rem;
     text-align: center;
-    padding: 1rem;
-    font-size: 0.8rem;
-    color: #94a3b8;
+}
+
+.notif-box.success {
+    background-color: #dcfce7;
+    color: #15803d;
+}
+
+.hidden {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .grid-inputs {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        padding: 1.5rem;
+    }
+
+    .navbar {
+        padding: 1rem;
+    }
 }
