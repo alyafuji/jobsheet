@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Explorer</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; }
+        .controls { display: flex; gap: 10px; margin-bottom: 20px; }
+        input, select, button { padding: 8px; }
+        #product-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 20px; }
+        .card { border: 1px solid #ddd; padding: 15px; border-radius: 8px; }
+        .card img { width: 100%; height: 150px; object-fit: cover; border-radius: 5px; }
+        .category-badge { background: #eee; padding: 3px 8px; border-radius: 12px; font-size: 12px; }
+    </style>
+</head>
+<body>
+    <h1>Katalog Produk</h1>
+    
+    <div class="controls">
+        <input type="text" id="search-input" placeholder="Cari produk..." />
+        <select id="category-filter">
+            <option value="all">Semua Kategori</option>
+        </select>
+        <button id="sort-btn">Urutkan: Termurah ke Termahal</button>
+    </div>
+
+    <h4 id="total-stats">Total Produk: 0</h4>
+
+    <div id="product-list"></div>
+
+    <script src="app.js"></script>
+</body>
+</html>
