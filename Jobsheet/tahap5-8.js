@@ -392,4 +392,4 @@ console.log(
     sortProducts(products, "title")
 );
 
-console.log("\n=== TAHAP 5-8 SELESAI ===");
+console.log("\nTAHAP 5-8 SELESAI");
